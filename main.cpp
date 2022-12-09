@@ -138,7 +138,7 @@ void forwardSelection(vector<vector<double>> instanceValues, int num_features)
     cout << "}, which has an accuracy of " << max << "%" << endl; 
 } 
 
-void backwardSelection(vector<vector<double>> instanceValues, int num_features) 
+void backward_Elimination(vector<vector<double>> instanceValues, int num_features) 
 { 
     vector<int> optimal_features(num_features); 	//stores the best features
     std::iota(optimal_features.begin(), optimal_features.end(), 1); 
@@ -275,7 +275,7 @@ int main() {
 	
 	if(algType == "2") 
 	{ 
-		 backwardSelection(instanceValues, num_features); 
+		 backward_Elimination(instanceValues, num_features); 
 	}  
 	else 
 	{
